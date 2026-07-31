@@ -1,0 +1,27 @@
+# LaTeX temporary and build output files
+*.aux
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.log
+*.out
+*.gz
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+*.xdv
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor configurations
+.vscode/
+.idea/
