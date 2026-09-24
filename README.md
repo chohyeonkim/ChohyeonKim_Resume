@@ -1,4 +1,3 @@
-
 # ChoHyeon Kim — Resume
 
 This repository contains the LaTeX source code and compiled PDF for my Software Engineering resume.
