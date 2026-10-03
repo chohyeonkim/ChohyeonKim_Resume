@@ -1,4 +1,5 @@
 \documentclass[letterpaper,11pt]{article}
+\providecommand{\ResumeGraduationStatus}{Graduated}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -24,8 +25,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 
@@ -61,13 +62,14 @@
     \end{tabular*}\vspace{-6pt} 
 }
 
-\newcommand{\resumeEducationHeading}[4]{
-  \vspace{-4pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \vspace{-3pt}
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-10pt}
+\newcommand{\resumeEducationHeading}[4]{%
+  \item
+  {\small
+    \textbf{#1}\enspace
+    \textit{#3}\hfill
+    #2\enspace
+    \textit{#4}\par
+  }%
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-6pt}}
@@ -75,7 +77,16 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 % Custom sub-heading list wrapper with negative top margin to adjust spacing after section lines
-\newcommand{\resumeSubHeadingListStart}{\vspace{-6pt}\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{
+  \vspace{-2pt}
+  \begin{itemize}[
+    leftmargin=0.1in,
+    label={},
+    itemsep=0pt,
+    topsep=0pt
+  ]
+}
+
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -98,17 +109,17 @@
 
 %-----------SUMMARY-----------
 \section{Professional Summary}
-\small{Software Engineer with strong engineering foundations, passionate about backend infrastructure, cloud networking, and distributed systems}
+\small{Software Engineer with 3+ years of engineering experience in the semiconductor industry and 2 years of software development internship experience. Interested in backend development, infrastructure, networking, distributed systems.}
 
 
 %-----------SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Golang, Java, C\#, C++, JavaScript, TypeScript, SQL, Bash} \\
+     \textbf{Languages}{: Python, Go, Java, C\#, C++, JavaScript, TypeScript, SQL, Bash} \\
      \textbf{Frameworks \& Libraries}{: Node.js, Express, React, .NET, FastAPI} \\
-     \textbf{Databases \& Cloud}{: PostgreSQL, MongoDB, Microsoft SQL, Azure Cloud} \\
-     \textbf{Tools \& CI/CD}{: Git, GitHub Actions, Jenkins, REST APIs, Linux, Docker}
+     \textbf{Databases \& Cloud}{: PostgreSQL, MongoDB, Microsoft SQL, Azure, AWS} \\
+     \textbf{Tools \& Infrastructure}{: Git, GitHub Actions, Jenkins, REST APIs, Linux, Docker}
     }}
  \end{itemize}
 
@@ -118,36 +129,35 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Developer Intern}{SAP}
-      {Vancouver, Canada}{May 2026 -- Present}
-      \resumeItemListStart
-      \resumeItem{Business Data Cloud – Cloud and Application Infrastructure Team for SAP Analytics Cloud.}
-      \resumeItem{Used AI-assisted investigation to identify blockers keeping systems and tenants on outdated platform versions, then automated version removal and resource cleanup workflows using GitHub Actions and Jenkins.}
-      \resumeItem{Developing a reusable skill and automation workflow to identify and remove 7+ years of obsolete migration-related code and streamline pull request creation.}
+      {Software Developer Intern}
+      {SAP}{Vancouver, Canada}{May 2026 -- Present}
+    \resumeItemListStart
+    \resumeItem{Business Data Cloud -- Cloud and Application Infrastructure Team for SAP Analytics Cloud.}
+    \resumeItem{Built an AI-assisted workflow using MCP and AI skills to investigate blockers across Jira, email, GitHub, internal wikis, and portals, synthesize findings, and generate actionable email drafts for teams to accelerate outdated platform version removal.}
+
+    \resumeItem{Automated version removal and resource cleanup workflows using GitHub Actions and Jenkins, accelerating retirement of versions costing approximately €10K per month to maintain while freeing infrastructure resources for upcoming releases.}
+
+    \resumeItem{Developing a reusable AI skill and Python automation workflow to identify and remove 7+ years of obsolete migration-related code using repository scan data, with automated pull request creation across owning teams.}
+    \resumeItem{Defined a standardized cleanup process for future migration waves, establishing business rules for code eligibility and ownership to prevent obsolete migration code from accumulating over time.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Developer in Test Intern}{Global Relay}
       {Vancouver, Canada}{Sep 2025 -- Apr 2026}
       \resumeItemListStart
-        \resumeItem{Information Archiving Department – Enrichment Team.}
-        \resumeItem{Developed end-to-end (E2E) tests using Java and Selenium WebDriver for UI automation.}
-        \resumeItem{Implemented TypeScript-based API test automation to validate API services.}
-        \resumeItem{Contributed to migrating the UI automation framework to WebdriverIO (TypeScript) with Cucumber.}
-        \resumeItem{Developed BDD-based E2E test scripts, improving test readability and cross-team collaboration.}
-        \resumeItem{Collaborated closely with developers and TPMs to establish test plans and define expected system behaviors.}
+      \resumeItem{Information Archiving Department -- Enrichment Team.}
+      \resumeItem{Developed TypeScript-based API test automation to validate API services and expected system behaviors.}
+      \resumeItem{Developed Java/Selenium E2E tests and contributed to migrating the UI automation framework to TypeScript, WebdriverIO, and Cucumber for BDD-based testing.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Software Development Engineer in Test Intern}{NETGEAR}
       {Richmond, Canada}{Sep 2023 -- Apr 2024}
       \resumeItemListStart
-        \resumeItem{Router Software Team - contributed to embedded system testing and test automation for networking products using Python and Bash.}
-        \resumeItem{Automated Test Execution, Design and implement automated tests, ensuring software quality.}
-        \resumeItem{Developed Python-based test automation frameworks on Linux Systems, utilizing Playwright for Web GUI test.}
-        \resumeItem{Gained experience in networking, with a focus on debugging and troubleshooting.}
-        \resumeItem{Contributed to the testbench infrastructure R/D, improved testing efficiency and scalability of test environments.}
-        \resumeItem{Worked with DevOps on GitHub Actions CI/CD pipelines and actively participated in code reviews, following Agile Scrum and Kanban processes.}
+      \resumeItem{Router Software Team -- Embedded software for networking products.}
+      \resumeItem{Developed Python and Bash test automation for C++-based embedded router software, reading and analyzing C++ source code to support debugging and troubleshooting.}
+      \resumeItem{Built Python-based test automation frameworks on Linux, including Playwright-based Web GUI testing.}
+      \resumeItem{Debugged and troubleshot networking issues across embedded router software and test environments.}\resumeItem{Contributed to a network-connected testbench infrastructure that enabled remote hardware testing over SSH, reducing the need for physical access to networking devices.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -156,6 +166,14 @@
       \resumeItemListStart
         \resumeItem{Analyzed electrical test results to identify and resolve failure mechanisms in power semiconductors.}
       \resumeItemListEnd
+
+    \resumeSubheading
+      {Junior Product Development Engineer}{STEMCO}
+      {South Korea}{Mar 2018 -- Nov 2019}
+      \resumeItemListStart
+        \resumeItem{Contributed to the chip-on-film team and managed product development.}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
   
 %-----------PROJECTS-----------
@@ -187,7 +205,7 @@
   \resumeSubHeadingListStart
     \resumeEducationHeading
       {University of British Columbia}{Vancouver, Canada}
-      {Bachelor of Computer Science (BCS) -- Cumulative Average: 85\%}{Graduated}
+      {Bachelor of Computer Science (BCS) -- Cumulative Average: 85\%}{\ResumeGraduationStatus}
     \resumeEducationHeading
       {Kookmin University}{Seoul, South Korea}
       {B.Eng. in Advanced Materials Engineering (Semiconductor)}{Graduated}
