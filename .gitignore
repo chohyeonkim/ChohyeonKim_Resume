@@ -25,3 +25,6 @@ Thumbs.db
 # Editor configurations
 .vscode/
 .idea/
+
+#tmp
+/tmp/
